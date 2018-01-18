@@ -2,6 +2,10 @@
   font-family: 'Ropa Sans', sans-serif;
 }
 
+.tengah {
+  text-align: center;
+}
+
 .nav ul{
   list-style-type: none;
   background-color: lightgrey;
