@@ -1,0 +1,22 @@
+.judul {
+  border: 1px solid #ccc;
+}
+
+.sub-judul {
+  border-bottom: 2px solid red;
+  border-top: 3px solid green;
+  padding-left: 5px;
+}
+
+.sub-sub-judul {
+  border: 1px solid blue;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+.bordered {
+  border: 1px solid green;
+  width: 32%;
+  display: inline-block;
+  padding-left: 5px;
+}

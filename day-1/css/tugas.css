@@ -1,0 +1,100 @@
+* {
+  font-family: 'Rubik', sans-serif;
+}
+body {
+  background-color: #fafafa;
+  color: #252525;
+  margin: 0;
+  min-height: 100vh;
+}
+ul.navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+.nav a:hover {
+  font-size: 20px;
+  color: #f18f01;
+  border-bottom: 10px solid #f18f01;
+}
+
+.center {
+  text-align: center;
+}
+.navigation.red {
+  background-color: red;
+}
+.light {
+  font-weight: 300;
+}
+
+/* membuat list ke kanan */
+li {
+  float: left;
+  padding: 10px;
+  color: white;
+}
+
+/* make center div container */
+.center-absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* button style */
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: white;
+}
+.btn {
+  transition: 0.1s linear;
+  -webkit-transition: 0.1s linear;
+  -moz-transition: 0.1s linear;
+  border-radius: 6px;
+  padding-top: 0.46428571em;
+  padding-bottom: 0.46428571em;
+  padding-right: 2.78571429em;
+  padding-left: 2.78571429em;
+  border: 1px solid #252525;
+  border-width: 1px;
+  font-size: inherit;
+  line-height: 1.85714286em;
+}
+.btn.type--uppercase {
+  letter-spacing: .5px;
+}
+.btn--primary, .btn--primary:visited {
+  background: #f18f01;
+  border-color: #f18f01;
+}
+.btn:hover {
+  transform: translate3d(0, -2px, 0);
+  -webkit-transform: translate3d(0, -2px, 0);
+}
+
+.words {
+  font-size: 3rem;
+}
