@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Challenge jQuery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+
+      #merah {
+        color: red;
+      }
+      #kuning {
+        color: yellow;
+      }
+      #hijau {
+        color: green;
+      }
+      .container {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .box {
+        display: inline-block;
+        margin: 0 auto;
+        width: 150px;
+        height: 50px;
+        margin-right: 20;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="container">
+        <h1 class="text-center">Klik warna untuk mengganti background</h1>
+        <br><br>
+          <div id="merah" class="box merah">Merah</div>
+          <div id="kuning" class="box kuning">Kuning</div>
+          <div id="hijau" class="box hijau">Hijau</div>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script>
+      $('#merah').click(function(){
+        $('body').css('background-color', 'red');
+        $('#merah').css('color', 'white');
+        $('#kuning').css('color', 'yellow');
+        $('#green').css('color', 'green');
+      });
+      $('#kuning').click(function(){
+        $('body').css('background-color', 'yellow');
+        $('#kuning').css('color', 'white');
+        $('#merah').css('color', 'red');
+        $('#hijau').css('color', 'green');
+      });
+      $('#hijau').click(function(){
+        $('body').css('background-color', 'green');
+        $('#hijau').css('color', 'white');
+        $('#merah').css('color', 'red');
+        $('#kuning').css('color', 'yellow');
+      });
+
+    </script>
+  </body>
+</html>

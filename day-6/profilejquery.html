@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Challenge jQuery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+  <body>
+      <div class="container">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="liverpool.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title" id="nama"></h5>
+            <p class="card-text" id="tagline"></p>
+            <button class="btn btn-primary" id="changeBackground">Change background</button>
+          </div>
+        </div>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script>
+      let nama = "Liverpool FC";
+      let tagline = "You'll Never Walk Alone";
+      let imageUrl = "anfield.jpeg";
+
+      $('#nama').text(nama);
+      $('#tagline').text(tagline);
+
+      $('#changeBackground').click(()=>{
+        //$('body').css('background-image', 'url("' + imageUrl + '")');
+        $('body').css({
+          'background-image': 'url("' + imageUrl + '")',
+          'background-repeat' : 'no-repeat',
+          'background-size': 'cover'
+        });
+      });
+
+    </script>
+  </body>
+</html>

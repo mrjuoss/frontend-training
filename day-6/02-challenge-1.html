@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Challenge jQuery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+
+      #merah {
+        color: red;
+      }
+      #kuning {
+        color: yellow;
+      }
+      #hijau {
+        color: green;
+      }
+      .container {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="container">
+        <h1 class="text-center">Klik warna untuk mengganti background</h1>
+        <br><br>
+        <div class="row">
+          <div id="merah" class="col-md-4 text-center display-4">Merah</div>
+          <div id="kuning" class="col-md-4 text-center display-4">Kuning</div>
+          <div id="hijau" class="col-md-4 text-center display-4">Hijau</div>
+        </div>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script>
+      $('#merah').click(function(){
+        $('body').css('background-color', 'red');
+        $('#merah').css('color', 'white');
+        $('#kuning').css('color', 'yellow');
+        $('#green').css('color', 'green');
+      });
+      $('#kuning').click(function(){
+        $('body').css('background-color', 'yellow');
+        $('#kuning').css('color', 'white');
+        $('#merah').css('color', 'red');
+        $('#hijau').css('color', 'green');
+      });
+      $('#hijau').click(function(){
+        $('body').css('background-color', 'green');
+        $('#hijau').css('color', 'white');
+        $('#merah').css('color', 'red');
+        $('#kuning').css('color', 'yellow');
+      });
+      /*
+      $('#merah').hover(()=>{
+        $('#merah').html('<abbr title="Klik Saya">Merah</abbr>');
+      });
+
+      $('#kuning').hover( ()=> {
+        $('#kuning').html('<abbr title="Klik Saya">Kuning</abbr>');
+      })
+
+      $('#hijau').hover(function(){
+        $('#hijau').html('<abbr title="Klik saya">Hijau</abbr>')
+      });
+      */
+    </script>
+  </body>
+</html>
