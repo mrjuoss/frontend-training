@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Latihan Ambil inputan</title>
+  </head>
+  <body>
+    Nama : <input type="text" name="nama" id="nama" value="">
+
+    <div id="pesan"></div>
+
+    <button onclick="ambilNilai()">Ambil Data</button>
+
+    <script>
+
+      function ambilNilai() {
+        let hasil = document.getElementById('nama').value
+        document.getElementById('pesan').innerHTML = hasil
+        alert(hasil)        
+      }
+    </script>
+  </body>
+</html>

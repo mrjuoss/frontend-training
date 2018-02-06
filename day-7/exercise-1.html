@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercise 01</title>
+  </head>
+  <body>
+    <div id="judul"></div>
+    <div id="pesan"></div>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+
+    let respon = prompt ('Hai, silahkan ketikkan password Anda.')
+
+    let password = 'admin123'
+    let pesanError = 'Maap, Password yang anda masukkan salah'
+
+    if (respon === password) {
+      document.getElementById('judul').innerHTML = "<h2>Latihan Pertama</h2>"
+      document.getElementById('pesan').innerHTML = 'Selamat datang Admin'
+    } else {
+      alert (pesanError)
+      window.location = 'http://google.com'
+    }
+    </script>
+  </body>
+</html>

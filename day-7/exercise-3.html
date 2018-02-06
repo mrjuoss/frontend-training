@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Latihan 3</title>
+  </head>
+  <body>
+    <script>
+    let inputScore = prompt("Input yout score (1 - 100)")
+    let grade
+
+    if (inputScore >80 && inputScore <= 100) {
+      grade = "A"
+    } else if (inputScore > 60 && inputScore <= 80) {
+      grade = "B"
+    } else if (inputScore > 40 && inputScore <= 60) {
+      grade = "C"
+    } else if (inputScore <= 40) {
+      grade = "D"
+    } else {
+      grade = "cannot calculate your grade"
+    }
+
+    alert(`Result : Your garde is ${grade}`)
+
+    </script>
+  </body>
+</html>
