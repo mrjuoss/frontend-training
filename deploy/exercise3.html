@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercise 4</title>
+  </head>
+  <body>
+    <div id="gender">
+      Your gender is :
+      <input type="radio" name="gender" class="gender" value="Mr." checked>Male
+      <input type="radio" name="gender" class="gender" value="Mrs.">Female
+    </div>
+    <div>
+      Your name : <input type="text" name="nama" id="nama">
+    </div>
+
+    <button onclick="pesan()">Order</button>
+
+    <div id="sapa"></div>
+
+
+
+    <script>
+
+      function pesan() {
+        let pesan
+        let guest = document.querySelector('input[name="gender"]:checked').value + " " + document.getElementById('nama').value
+
+        let haus = prompt("Hai "+ guest +". Apakah anda haus ? (Ya/tidak)")
+
+        if (haus == "ya") {
+          let minuman = prompt("Anda mau minum apa ?")
+          minuman = minuman.toLowerCase();
+
+          if (minuman == "juice") {
+            pesan = "Minuman Juice tidak tersedia"
+          } else {
+            pesan = `Baik ${guest}. satu gelas ${minuman} akan segera datang`
+          }
+        } else {
+          pesan = `Selamat datang ${guest}. Terimah kasih atas kunjungan anda`
+        }
+
+        alert (pesan)
+        document.getElementById('sapa').innerHTML = pesan
+        //document.getElementById('sapa').innerHTML = guest + "<br>" + pesan
+      }
+    </script>
+  </body>
+</html>

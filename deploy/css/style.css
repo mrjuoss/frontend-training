@@ -1,0 +1,35 @@
+*{
+  font-family: 'Ropa Sans', sans-serif;
+}
+
+.tengah {
+  text-align: center;
+}
+
+.nav ul{
+  list-style-type: none;
+  background-color: lightgrey;
+}
+
+.nav li {
+  display: inline-block;
+  float: left;
+  padding: 5px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover{
+  background: lightgrey;
+  text-decoration: none;
+}
+
+.active {
+  background: blue;
+}
+
+.active a {
+  color: white;
+}

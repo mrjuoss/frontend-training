@@ -26,21 +26,24 @@
         let pesan
         let guest = document.querySelector('input[name="gender"]:checked').value + " " + document.getElementById('nama').value
 
-        let haus = prompt("Hai "+ guest +". Apakah anda haus ?")
+        let haus = prompt("Hai "+ guest +". Apakah anda haus ? (Ya/tidak)")
 
         if (haus == "ya") {
           let minuman = prompt("Anda mau minum apa ?")
+          minuman = minuman.toLowerCase();
+
           if (minuman == "juice") {
             pesan = "Minuman Juice tidak tersedia"
           } else {
             pesan = `Baik ${guest}. satu gelas ${minuman} akan segera datang`
           }
-      } else {
-        pesan = `Selamat datang ${guest}. Terimah kasih atas kunjungan anda`
-      }
-      alert (pesan)
-      document.getElementById('sapa').innerHTML = pesan
-      //document.getElementById('sapa').innerHTML = guest + "<br>" + pesan
+        } else {
+          pesan = `Selamat datang ${guest}. Terimah kasih atas kunjungan anda`
+        }
+
+        alert (pesan)
+        document.getElementById('sapa').innerHTML = pesan
+        //document.getElementById('sapa').innerHTML = guest + "<br>" + pesan
       }
     </script>
   </body>

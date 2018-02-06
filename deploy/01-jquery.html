@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Belajar jQuery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style media="screen">
+      #div1 {
+        background: red;
+      }
+      #div2 {
+        background: yellow;
+      }
+      #div3 {
+        background: green;
+      }
+      .kotak, .kotak-div {
+        width: 100px;
+        height: 100px;
+        border: 2px solid red;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wew"></div>
+    <div id="notification">Tes Container</div>
+    <div class="container"></div>
+    <div class="alert alert-danger">Tes Alert</div>
+    <button type="button" name="sembunyikanKotak" id="sembunyikanKotak">Sembunyikan Kotak</button>
+    <button type="button" name="tampilkanKotak" id="tampilkanKotak">Tampilkan Kotak</button>
+    <div class="kotak"></div>
+    <div class="kotak"></div>
+    <p id="secret">Paragraph rahasia</p>
+      <button type="button" name="button" id="gantiWarna">Ganti Warna</button>
+    <ol class="konten">
+      <li>html</li>
+      <li>css</li>
+      <li>javascript</li>
+    </ol>
+
+    <div id="thing">Text ini akan dislideDown</div>
+
+    <h2>Greetings</h2>
+    <div class="container">
+      <div class="inner">Hello</div>
+      <div class="inne">Good bye</div>
+    </div>
+
+    <button type="button" name="buttonEfek" id="buttonEfek">Jalankan Efek fadeOut</button>
+
+    <div class="kotak-div" id="div1"></div>
+    <div class="kotak-div" id="div2"></div>
+    <div class="kotak-div" id="div3"></div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script>
+      //$('body').text('Tulisan ini berikut style cssnya ditampilkan dari jquery');
+      $('body').css('background-color', 'lightgreen');
+      $('#wew').text('Uhui');
+      $('#notification').html('<div class="alert alert-success">Hold on! <b>an error</b> has occured</div>');
+      $('.container').append("<p>What's the difference between <i>.append()</i> and .html</p>");
+
+      $('.kotak').css('background-color', 'white');
+      $('.kotak').append('<p>Paragrap tambahan</p>');
+
+      $('.inner').prepend('<p>Test prepend</p>');
+      //Bedakan function append dan prepend
+      //efek append akan muncul dibawah element yang kita tunjuk sedangkan prepend akan muncul diatas elemen yang kita tunjuk
+
+      $('p#secret').hide();
+      $('ol li').fadeIn("slow");
+
+      $('div#thing').slideDown();
+
+      $('#gantiWarna').click(function() {
+        $('.konten').css('background-color', 'white');
+      });
+
+      $('#sembunyikanKotak').click( () => {
+        $('.kotak').fadeOut();
+      });
+      $('#tampilkanKotak').click( () => {
+        $('.kotak').fadeIn();
+      });
+
+      $('#buttonEfek').click( function() {
+        $('#div1').fadeOut();
+        $('#div2').fadeOut('slow');
+        $('#div3').fadeOut(3000);
+      });
+    </script>
+  </body>
+</html>
