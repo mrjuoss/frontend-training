@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Latihan Array</title>
+  </head>
+  <body>
+    <h2>Latihan Array bersama Hacktiv8</h2>
+    Daftar Resep bikin Bakso
+    <div id="resep">
+      <ol id="listResep"></ol>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script>
+      let recipe = ["½ kg daging sapi segar", "100 gr tepung tapioka", "1 sdt garam", "½ sdt lada putih bubuk", "1 sdm bawang putih yang sudah dihaluskan"];
+
+      recipe[0];
+
+      let last_step = recipe[recipe.length - 1]
+
+      alert(last_step)
+
+      for (i = 0; i < recipe.length; i++) {
+        $("#listResep").append("<li>"+recipe[i]+"</li>")
+        //document.getElementById("listResep").append("<li>"+recipe[i]+"</li>");
+      }
+
+    </script>
+  </body>
+</html>

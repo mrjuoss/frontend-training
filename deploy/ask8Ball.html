@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ask the Ball</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <style>
+      #formAsk, .panel  {
+        margin-top: 30px;
+      }
+      #askEverything {
+        width: 700px;
+      }
+      #formAsk {
+        display: inline-block;
+      }
+      .logo {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div class="logo text-center">
+        <img src="logo.gif">
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <div id="formAsk">
+            <div class="form-group">
+              <label for="askEverything">Your Question:</label>
+              <input type="text" class="form-control" id="askEverything">
+            </div>
+            <button type="submit" class="btn btn-success" onclick="tampilkanJawaban()">Ask Me</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="jawaban">
+
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">My Answer</h3>
+            </div>
+            <div class="panel-body" id="panelJawaban">
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+      let jawaban = [
+        "Alhamdulillah Baik",
+        "Mau Makan",
+        "Lagi ngoding",
+        "Maaf, Anda salah sambung",
+        "Maaf, Lagi diet",
+        "Jakarta memang Macet"
+      ]
+
+      function tampilkanJawaban() {
+        let question = $("#askEverything").val()
+        if (question == "") {
+          alert ("Silahkan isi pertanyaan yang ingin anda tanyakan.")
+        } else {
+          let rand = Math.floor(Math.random() * jawaban.length)
+          $("#panelJawaban").text(jawaban.splice(rand,1))
+        }
+      }
+    </script>
+  </body>
+</html>

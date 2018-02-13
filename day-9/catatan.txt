@@ -1,0 +1,23 @@
+Array
+
+1. Index Array
+
+2. .push = Add value onto the end of your list
+
+3. .unshift = Add value onto the beginning
+
+4. .pop = Off one value in the end and save it to a variable
+
+5. .shift = Off one value in the beginning and save it to a variable
+
+6. .concat = Untuk menggabungkan 2 2 array menjadi 1
+
+7. .splice = Untuk mengambil nilai array dari index ke sekian sebanyak sekian nilai
+
+8. .forEach
+
+9. .length()
+
+10. Memanggil array secara Random
+
+11. Math.floor(), Math.random()
