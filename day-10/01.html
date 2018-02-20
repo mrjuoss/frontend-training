@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Belajar Object</title>
+  </head>
+  <body>
+    <h2>Belajar Object</h2>
+
+    <div id="demo"></div>
+
+    <script>
+      let orang = {
+        nama : 'Jaki',
+        'alamat' : 'Jakarta',
+        hoby: [
+          'Maen',
+          'Baca',
+          'Ngoding'
+        ],
+        statusMenikah: false
+      }
+
+      orang.hoby.push('Makan')
+
+      let prop = 'pekerjaan'
+
+      orang.prop = 'Aparatur Sipil Negara'
+
+      console.log(orang)
+
+      let listHoby = orang.hoby.forEach(function (val){
+        console.log(val)
+      })
+
+      document.querySelector('#demo').innerHTML = orang.alamat
+
+      // Cara mengakses Property sebuah Object
+      // namaObject.namaProperty
+      // atau
+      // namaObject[namaProperty]
+
+      // Perbedaannya untuk namaObject[namaProperty] bisa digunakan untuk merefer ke pointer
+
+      // Contoh
+      orang.prop = 'Get data by orang.pop'
+      orang[prop] = 'Get data yang merefer ke pekerjaan (isi variabel pop) by orang[prop]'
+
+    </script>
+  </body>
+</html>

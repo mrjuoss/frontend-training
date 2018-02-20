@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Selected Element with jquery</title>
+    <style>
+      .horizontal {
+        float: left;
+        margin: 10px;
+        list-style: none;
+      }
+      .sub-level {
+        background-color: #ccc;
+      }
+      a {
+        color: #00c;
+      }
+      a.mailto {
+        background: url(hacktiv8.jpeg) no-repeat right top;
+        padding-right: 18px;
+      }
+      a.pdflink {
+        background: url(anfield.jpeg) no-repeat right top;
+        padding-right: 18px;
+      }
+      a.henryLink {
+        background-color: #fff;
+        padding: 2px;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Selected Shakespeare Plays</h3>
+    <ul id="selected-player">
+      <li>Comedies
+          <ul>
+            <li>
+              <a href="#">As you like it</a>
+            </li>
+            <li>All's well that ends well</li>
+            <li>A midsummer night'dream</li>
+            <li>Twelf Night</li>
+          </ul>
+      </li>
+      <li>Tragedies
+        <ul>
+          <li><a href="file.pdf">Hammet</a></li>
+          <li>Macbeth</li>
+          <li>Romeo and Juliet</li>
+        </ul>
+      </li>
+      <li>Histories
+        <ul>
+          <li>Henry IV <a href="mailto:mrjuoss@gmail.com">Email</a>
+            <ul>
+              <li>Part I</li>
+              <li>Part II</li>
+            </ul>
+          </li>
+          <li>
+            <a href="http://fb.com/henryMujaki" >Henry V</a>
+          </li>
+          <li>Richard 2</li>
+        </ul>
+      </li>
+    </ul>
+
+    <script src="jquery-slim.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#selected-player > li').addClass('horizontal')
+        // Find each list item (li) that is child (>) of the element with ID of selected-player
+        $('#selected-player li:not(.horizontal)').addClass('sub-level')
+
+        $('a[href^="mailto:"]').addClass('mailto')
+
+        $('a[href$=".pdf"]').addClass('pdflink')
+
+        $('a[href^="http"][href*="henry"]').addClass('henryLink')
+
+      })
+
+
+      /*
+        ## Bisa Juga diletakkan disini ##
+
+        $('#selected-player > li').addClass('horizontal')
+        // Find each list item (li) that is child (>) of the element with ID of selected-player
+        $('#selected-player li:not(.horizontal)').addClass('sub-level')
+      */
+    </script>
+  </body>
+</html>

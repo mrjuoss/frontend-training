@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Demo Countdown Timer</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+
+    <script>
+      // Set the date we're counting down
+      //let endDate = new Date("April 5, 2018 08:30:25").getTime()
+      let endDate = new Date('5 April 2018 08:30:59 GMT+0700').getTime()
+      //console.log(endDate)
+      // Update the count down every 1 second
+      let updateTime = setInterval( ()=> {
+        // Get today date and time
+        let now = new Date().getTime()
+        //console.log(now)
+        // Find the distance between now an the count down
+        let distance = endDate - now
+        //console.log(distance)
+        // Time calculation
+        let days = Math.floor( distance / (1000 * 60 * 60 * 24))
+
+        let hours = Math.floor( (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+
+        let minutes = Math.floor( (distance % (1000 * 60 * 60)) / (1000 * 60))
+
+        let seconds = Math.floor( (distance % (1000 * 60)) / 1000)
+
+        // Display Result
+        document.getElementById('demo').innerHTML = days +" hari " + hours +" jam "+ minutes +" menit " + seconds + " detik"
+
+        // If countdown Finish
+        if ( distance < 0) {
+          clearInterval(updateTime)
+
+          document.getElementById('demo').innerHTML = 'EXPIRED'
+        }
+      }, 1000 )
+
+
+    </script>
+  </body>
+</html>

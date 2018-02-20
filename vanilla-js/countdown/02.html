@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Demo Countdown Time</title>
+  </head>
+  <body>
+    <div id="demo"></div>
+
+    <script>
+      // To Do List
+      // 1. Set a Valid end date
+            //ISO 8601 format
+            let deadline = '2018-12-31'
+            //Short format
+            let deadline2 = '31/12/2018'
+            //Long format
+            let deadline3 = 'December 31 2018'
+            let deadline4 = 'December 31 2018 23:50:45 GMT+0700'
+
+      // 2. Calculate the time remairing
+            function getTimeRemairing(endTime) {
+              let t = Date.parse(endTime) - Date.parse(new Date())
+              // The Date.perse() function is native Javascript that convert a time string into value in miliseconds
+
+              let seconds = Math.floor( (t / 1000) % 60)
+
+              let minutes = Math.floor( (t / 1000 / 60) % 60)
+
+              let hours = Math.floor( (t/ (1000 * 60 * 60)) % 24)
+
+              let days = Math.floor( t / (1000 * 60 *60 *24))
+
+              return {
+                'total'   : t,
+                'days'    : days,
+                'hours'   : hours,
+                'minutes' : minutes,
+                'seconds' : seconds
+              }
+
+
+            }
+      // 3. Convert the rime to a usable format
+      let data = getTimeRemairing(deadline)
+      //console.log(data.days)
+
+      //console.log(getTimeRemairing(deadline))
+      // 4. Output the clock data as a reusable object
+          //document.getElementById('demo').innerHTML = data.days + " hari " + data.hours + " jam " + data.minutes + " menit " + data.seconds + " detik"
+          document.getElementById('demo').innerHTML = `${data.days} hari ${data.hours} jam ${data.minutes} menit ${data.seconds} detik`
+      // 5. Display the clock on the page, and stop the clock when it reaches zero
+    </script>
+  </body>
+</html>

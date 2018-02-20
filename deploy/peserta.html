@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Peserta Coding Class Batch 5</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+    .container {
+      margin-top: 50px;
+    }
+    .card {
+      height: 450px;
+      margin-top: 10px;
+    }
+    .card-img-top {
+      height: 200px;
+    }
+    .mysite {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+      <h3>Peserta Coding Class Hactiv8 Frontend Basic</h3>
+
+      <div id="output" class="row card-deck"></div>
+
+    </div>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script>
+    let data_peserta = [
+    	{
+      	nama: "anthony juan",
+        hobby: ["makan","tidur"],
+        quotes: "pelan-pelan tapi pasti",
+        website: "anthonyjuan.github.io",
+        photo: "https://scontent.fcgk12-1.fna.fbcdn.net/v/t1.0-1/p320x320/64956_10207624612127105_2691265683828772899_n.jpg?oh=d96048c16ed02adb6826f539bc2b8c73&oe=5B05178D"
+      },
+      {
+      	nama: "Fadhlia Annisa",
+        hobby: ["traveling","kuliner"],
+        quotes: "man jadda wa jadda",
+        website: "ipad.netlify.com",
+        photo: "https://pbs.twimg.com/profile_images/454601301955837952/XB90zzbF_400x400.jpeg"
+      },
+      {
+      	nama: "M Hafil Adiputra",
+        hobby: ["Kuliner","tidur"],
+        quotes: "Happy Holiday",
+        website: "https://jolly-wozniak-69c3c9.netlify.com/form.html",
+        photo: "https://media.giphy.com/media/UYBXiQpLs0UsU/giphy.gif"
+      },
+      {
+      	nama: "Zakaria Niode",
+        hobby: ["browsing","baca buku", "main game"],
+        quotes: "Everything is possible",
+        website: "zniode.netlify.com/biography.html",
+        photo: "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/6/005/085/168/22c30fe.jpg"
+      },
+      {
+      	nama: "M. Arif Mujaki",
+        hobby: ["kuliner", "nonton"],
+        quotes: "Apapun yang terjadi, jangan lupa bahagia",
+        website: "https://fb.com/dearsh",
+        photo: "https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/1382333_10151853369583563_1066728537_n.jpg?oh=bc81dc72873f69527563acbca5fc54de&oe=5B0DBAA4"
+      },
+      {
+      	nama: "Muhammad Candra Kumala",
+        hobby: ["membaca"],
+        quotes: "",
+        website: "zniode.netlify.com/biography.html",
+        photo: "https://scontent.fcgk12-1.fna.fbcdn.net/v/t1.0-1/p320x320/64956_10207624612127105_2691265683828772899_n.jpg?oh=d96048c16ed02adb6826f539bc2b8c73&oe=5B05178D"
+      },
+      {
+      	nama: "Kalimah Wasis Lestari",
+        hobby: ["Travelling"],
+        quotes: "Do good, and good will come to you",
+        website: "http://oasiscenter.netlify.com/lestaridev.html",
+        photo: "https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/25591581_1519749571441775_4237579175709767502_n.jpg?oh=a24bdeef5c7744a85adcdb755c515458&oe=5B1DC882"
+      },
+      {
+      	nama: "Moh Habib Zain",
+        hobby: ["ngoding","baca"],
+        quotes: "belajar, belajar, belajar",
+        website: "https://abib.netlify.com/",
+        photo: "https://scontent-sin6-2.cdninstagram.com/vp/4cc1e05656ed456dbbb794dd8ea8e044/5B149B28/t51.2885-19/s150x150/25021864_326565707829396_3995476619404771328_n.jpg"
+      },
+      {
+        nama : "Herianto",
+        hobby : ["Martial art","Badminton"],
+        quotes : "i am programmer i have no life",
+        website : "https://optimistic-lamport-62efde.netlify.com/",
+        photo : "https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/314862_241806409201578_176151446_n.jpg?oh=a99c9661131b0b41c37b6c6fe61d4f39&oe=5B0C8C6A"
+      }
+    ]
+
+    console.log(data_peserta)
+
+    data_peserta.forEach(function(val){
+      $('#output').append(`
+        <div class="col-md-3">
+          <div class="card">
+            <img class="card-img-top" src=${val.photo}>
+            <div class="card-body">
+              <h5 class="card-title">Name : ${val.nama}</h5>
+              <p class="card-text">Hobby : ${val.hobby.join(', ')}</p>
+              <ol id=${val.nama}></ol>
+              <p class="card-text"><small class="text-muted">Quotes : ${val.quotes}</small></p>
+              <a href=${val.website} target="_blank" class="btn btn-info btn-sm mysite"><small>My Website</small></a>
+            </div>
+          </div>
+        </div>
+      `)
+    })
+
+    </script>
+  </body>
+</html>

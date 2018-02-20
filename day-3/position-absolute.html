@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Belajar Position Absolute</title>
+    <style>
+      #kotak1 {
+        width: 300px;
+        height: 100px;
+        border: 1px solid red;
+      }
+      #kotak2 {
+        width: 300px;
+        height: 300px;
+        border: 5px solid yellow;
+        position: relative; //bandingkan jika ini ada dan jika baris ini tidak ada (uncomment)
+      }
+      #kotak3 {
+        width: 200px;
+        height: 100px;
+        padding: 10px;
+        border: 5px solid green;
+        position: absolute;
+        top: 10px;
+        //right: 50px;
+        left: 30px; //Left dan right pilih salah satu
+        text-align: center;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div id="kotak1"></div>
+    <div id="kotak2">
+      <div id="kotak3">
+        Potion: absolute; top:0px; right:50px
+      </div>
+    </div>
+
+  </body>
+</html>

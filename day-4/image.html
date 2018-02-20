@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Menampilkan Image with Bootstrap 4</title>
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="text-center">Image with Bootstrap 4 <br>(Perhatikan beda tiap gambar)</h2>
+      <!--
+        .rounded = untuk membuat sudut gambar menjadi melengkung (rounded)
+
+        .rounded-circle = untuk membuat gambar menjadi lingkaran (cirle)
+
+        .img-thumbnail = untuk menampilkan gambar dengan bentuk thumbnail
+
+        .float-left dan .float-right = untuk mengatur posisi gambar ketika ditampilkan
+
+        .img-fluid = untuk membuat gambar menjadi responsive sehingga ukuran gambar akan menyesuaikan ukuran dari parent gambarnya
+      -->
+      <img src="jaki.jpg" width="250">
+
+      <img src="jaki.jpg" width="250" class="rounded">
+
+      <img src="jaki.jpg" width="250" class="rounded-circle">
+
+      <img src="jaki.jpg" width="250" class="img-thumbnail">
+
+      <img src="jaki.jpg" width="150" class="img-thumbnail float-right">
+
+      <img src="jaki.jpg" width="150" class="img-thumbnail float-left">
+
+      <img src="jaki.jpg" width="800" class="img-fluid img-thumbnail float-left">
+
+    </div>
+  <script src="lib/js/jquery-slim.min.js"></script>
+  <script src="lib/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Looping</title>
+  </head>
+  <body>
+    <div id="result_for"></div>
+    <h3>Looping with While</h3>
+    <div id="result_while"></div>
+
+    <script>
+      let text = "Looping with for looping <br>"
+
+      for (i = 0; i < 5; i++) {
+        text += "The number is "+ i + "<br>";
+      }
+      document.querySelector('#result_for').innerHTML = text
+
+      let txt_while = ""
+      let n = 0
+
+      console.log ("I'm called the count ... because i really love the count")
+
+      while (n < 10) {
+        console.log (n, "ha ha ha")
+        n++
+      }
+
+      console.log ('Fin!!!')
+
+      let count_song = 10
+      let song = ""
+
+      while ( count_song >= 0) {
+        if ( count_song !== 0){
+          song += count_song + " what do you mean, oohh"
+        } else {
+          song += " - justin bieber song"
+        }
+        count_song--
+      }
+
+      document.querySelector('#result_while').textContent = song
+
+    </script>
+  </body>
+</html>
