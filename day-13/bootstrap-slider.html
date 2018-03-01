@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <!-- css bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <title>Document</title>
+    <style>
+        .item img {
+            width: 100%;
+        }
+
+        .item {
+            overflow: hidden;
+            max-height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="http://www.dapurkobe.co.id/wp-content/uploads/martabak-8-rasa.jpg" alt="...">
+                <div class="carousel-caption">
+                    Caption here
+                </div>
+            </div>
+            <div class="item">
+                <img src="data:image/jpeg;base64,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"
+                    alt="...">
+                <div class="carousel-caption">
+                    <h1>Caption here</h1>
+                </div>
+            </div>
+            <div class="item">
+                <img src="https://www.beritainfo.web.id/wp-content/uploads/2015/10/Martabak-Manis.jpg" alt="">
+                <div class="carousel-caption">
+                    Caption here
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div class="container text-center" style="margin-top: 30px;">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+            Pesan Martabak Sekarang
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Pesan Martabak Enak DISINI!</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Nama Kamu</label>
+                            <input type="text" class="form-control" id="nama" placeholder="Nama Kamu siapa">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Pesan Kamu</label>
+                            <input type="text" class="form-control" id="pesan" placeholder="pesan kamu apa">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="submit" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center" style="margin-top: 30px;">
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+    </div>
+
+    <div class="container" style="margin-top: 30px;">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4" id="comment-wrapper">
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- javascript bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script>
+        $('.carousel').carousel({
+            interval: 5000
+        })
+
+        $(document).ready(function () {
+            // $('#myModal').modal('show')
+
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
+
+            let comments = [
+                {
+                    name: 'John Doe',
+                    comment: 'Hallo ini comment pertama'
+                }
+            ]
+
+            comments.forEach(function(comment) {
+                let template = `
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" width="100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6Ffz-55o9iXQ999Y5gmqrjdum0UyWCNTcTZkp5pN0J7_5xQ9J"
+                                    alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">${comment.name}</h4>
+                            ${comment.comment}
+                        </div>
+                    </div>
+                    `
+                $('#comment-wrapper').append(template)
+            })
+
+            $('#submit').click(function(){
+                let nama = $('#nama').val()
+                let pesan = $('#pesan').val()
+
+                let template = `
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" width="100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6Ffz-55o9iXQ999Y5gmqrjdum0UyWCNTcTZkp5pN0J7_5xQ9J"
+                                    alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">${nama}</h4>
+                            ${pesan}
+                        </div>
+                    </div>
+                    `
+                $('#comment-wrapper').prepend(template)
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Event Jquery</title>
+    <style>
+      #box {
+        margin: 0 auto;
+        border: 1px solid blue;
+        width:500px;
+        height: 300px;
+      }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      let balikKata = function(word) {
+        //word = "Mujaki"
+
+        let wordTemp = word.split('')
+
+        let wordReverse = wordTemp.reverse()
+
+        let result = wordReverse.join('')
+
+        return result
+      }
+      $(document).ready(function(){
+        //$('#box').fadeOut(2000)
+        let nama = balikKata("Arif Mujaki")
+
+        $('#box').append(`
+          <h3>Hi, nama saya klo dibalik menjadi ${nama}</h3>
+        `)
+
+      })
+    </script>
+
+  </head>
+  <body>
+    <div id="box"></div>
+  </body>
+</html>

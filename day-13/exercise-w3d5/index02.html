@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap</title>
+    <link rel="stylesheet" type="text/css"
+    href="css/bootstrap.min.css">
+    <style type="text/css">
+        .border{
+            border: 1px solid #d1d1d1;
+            padding:15px;
+            margin-bottom:15px;
+            background: white;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: #173854;
+        }
+
+        p {
+            font-size: 16px;
+            color: #3f3f3f;
+        }
+
+        .add-spacing {
+            margin-top: 85px;
+        }
+
+
+        @media (min-width:1200px){
+            /* do nothing, since we do not change anything in this device width */
+            body {
+              background: url(img/2275.jpg) no-repeat center center fixed;
+              background-size: cover;
+            }
+            h1,p {
+              color: red;
+            }
+            h1 {
+              font-size: 26px;
+            }
+            p {
+              font-size: 16px;
+            }
+
+        }
+
+        @media (min-width:992px) and (max-width:1199px){
+            body {
+              background: url(img/6486.jpg) no-repeat;
+              background-size: cover;
+            }
+            h1,p {
+              color: yellow;
+            }
+            h1 {
+                font-size: 22px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+
+        @media (min-width:768px) and (max-width:991px){
+            h1,p {
+              color: green;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+/*
+        @media (min-width:500px) and (max-width:750px){
+
+            h1, p {
+              color: blue;
+              display: none;
+            }
+
+            h1 {
+                font-size: 18px;
+            }
+            p {
+                font-size: 10px;
+            }
+        } */
+
+    </style>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">CODING CLASS</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+
+
+    <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        // your code goes here
+    </script>
+</body>
+</html>

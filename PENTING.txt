@@ -1,0 +1,30 @@
+Tahapan dalam Pembuatan sebuah Aplikasi
+
+1. Bikin Coretan Codenya (Pseudo Code)
+2. Pseudo Code (Kumpulan Step2)
+3. Perancangan Codenya
+
+Punya gambaran kasar untuk selanjutnya diterjemahkan ke dalam sebuah coding.
+
+Pseudo = Semu
+
+Biasanya pseudocode digunakan untuk menjelaskan suatu algoritma
+
+Saya beri contoh ya, misalnya untuk menjelaskan algoritma mengupas kentang (algortima favorit!! :p ), ini adalah pseudocode nya:
+
+hitungan_kentang = 0;
+ambil pisau;
+buka lemari;
+
+WHILE masih ada kentang di lemari DO
+      ambil kentang;
+      kupas kentang;
+      masukkan kentang ke baskom;
+      INCREMENT hitungan_kentang;
+ENDWHILE
+
+tutup lemari;
+simpan pisau;
+WRITE hitungan_kentang;
+
+pseudocode adalah sebuah kode yang digunakan untuk menulis sebuah algoritma dengan cara yang bebas yang tidak terikat dengan bahasa pemrograman tertentu

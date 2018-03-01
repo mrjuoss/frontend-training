@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Firebase with Javascript </title>
+  </head>
+  <body>
+
+    Humadity :
+    <humadity></humadity> <br>
+    Temperature: <temperature></temperature> <br>
+    Clock : <clock></clock> </br>
+
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDwcVcl7nsr-SXVCLzhDg9GY07ewypo-AM",
+        authDomain: "hacktiv8-frontend.firebaseapp.com",
+        databaseURL: "https://hacktiv8-frontend.firebaseio.com",
+        projectId: "hacktiv8-frontend",
+        storageBucket: "",
+        messagingSenderId: "340058459738"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <script>
+      let h = document.querySelector('humadity')
+      let t = document.querySelector('temperature')
+      let c = document.querySelector('clock')
+
+      let pad = function(x){
+        // Make it nice with 0 in front of number les than 10
+        return x < 10 ? '0' + x : x
+      }
+
+      let showClock = function(){
+        let d = new Date()
+        let h = pad(d.getHours())
+        let m = pad(d.getMinutes())
+        let s = pad(d.getSeconds())
+
+        c.innerHTML = [h,m,s].join(' : ')+ " WIB"
+        // c is refer to 'clock' selector
+      }
+
+      // Repeat showClock function every 1 second. Clock will Display
+      setInterval(showClock, 1000)
+    </script>
+
+  </body>
+</html>

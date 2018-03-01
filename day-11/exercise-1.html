@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Latihan Fungsi dengan Javascript</title>
+  </head>
+  <body>
+
+    <h2>Belajar function di Javascript</h2>
+
+    <div id="demo"></div>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script>
+    let string_printer = (text) => {
+      return text
+    }
+
+    let stringSatu = string_printer("String Pertama")
+    console.log(stringSatu)
+
+    let stringDua = string_printer("String Kedua")
+    console.log(stringDua)
+
+    let stringTiga = string_printer("String Ketiga")
+    console.log(stringTiga)
+
+    let stringEmpat = string_printer("String Keempat")
+    console.log(stringEmpat)
+
+    $('#demo').append(`
+      String pertama : ${stringSatu} <br>
+      String kedua : ${stringDua} <br>
+      String ketiga : ${stringTiga} <br>
+      String keempat : ${stringEmpat} <br>
+      `)
+    </script>
+  </body>
+</html>

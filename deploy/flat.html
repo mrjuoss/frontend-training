@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Flat Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/onepage-scroll/1.3.1/onepage-scroll.css">
+    <style>
+      /* Header */
+      header {
+        background: #36D7B7;
+        padding: 10px 20px;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 10;
+        overflow: hidden;
+      }
+
+      header a {
+        color: #96281B;
+        text-decoration: none;
+      }
+
+      header img {
+        float: left;
+      }
+
+      header h1 {
+        margin-top: 20px;
+        margin-left: 80px;
+        font-family: 'Righteous', cursive;
+      }
+
+      /* COntent */
+      .page {
+        background: url(img/logo.webp) right top no-repeat;
+        background-size: 100px;
+        color: white;
+      }
+
+      .one {
+        background-color: #ae6c66;
+      }
+
+      .one .page-container {
+        position: absolute;
+        bottom: 100px;
+        margin-left: -400px;
+        left: 50%;
+        margin-bottom: 150px;
+        max-width: 650px;
+      }
+
+      .one .page-container h2 {
+        font-size: 4em;
+      }
+
+      .one .page-container h2 {
+        padding: 20px 0;
+        line-height: 1.5em;
+      }
+
+      .two {
+        background-color: #b69877;
+      }
+
+      .two .page-container {
+        position: absolute;
+        bottom: 100px;
+        margin-left: -400px;
+        left: 50%;
+        margin-bottom: 150px;
+        max-width: 650px;
+      }
+
+      .two .page-container h2 {
+        font-size: 4em;
+      }
+
+      .two .page-container p {
+        padding: 20px 0;
+        line-height: 1.5em;
+      }
+
+      .three {
+        background-color: #036564;
+      }
+      .three .page-container {
+        position: absolute;
+        bottom: 100px;
+        margin-left: -400px;
+        left: 50%;
+        margin-bottom: 150px;
+        max-width: 650px;
+      }
+      .three .page-container h2 {
+        font-size: 4em;
+      }
+      .three .page-container p {
+        padding: 20px 0;
+        line-height: 1.5em;
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <img src="http://tutorial-webdesign.com/labs/jquery/landing-one-page/img/twd-logo-mini.png" alt="logo">
+      <h1>
+        <a href="http://jaki.netlify.com"> mrjuoss <small>@gmail.com</small></a>
+      </h1>
+    </header>
+
+    <div class="main">
+      <section class="page one">
+        <div class="page-container">
+          <h2>Tutorial</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas laboriosam quos ea expedita tempora eligendi quibusdam maxime et minima dicta doloremque dolor, laborum aperiam nemo saepe, itaque autem aspernatur rerum!</p>
+        </div>
+      </section>
+
+      <section class="page two">
+        <div class="page-container">
+          <h2>Web</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </section>
+
+      <section class="page three">
+        <div class="page-container">
+          <h2>Design <small> &bull;Indonesia</small></h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas officiis explicabo totam dolorum, ipsum corporis nesciunt, voluptatem veniam necessitatibus, iste, animi. Ullam at culpa, officiis quam, fugit suscipit repellendus! Impedit!
+          </p>
+        </div>
+      </section>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/onepage-scroll/1.3.1/jquery.onepage-scroll.js"></script>
+
+    <script>
+      $(".main").onepage_scroll({
+        sectionContainer: "section",
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Latihan Event Jquery</title>
+    <style>
+      #output {
+        margin: 10px;
+        font-size: 25px;
+      }
+      .aktif {
+        color: red;
+        background-color: yellow;
+      }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+
+      $(document).ready(function(){
+        /*
+        $('#p1').click(function(){
+          let clickElement = this.id
+
+          $('#output').text(clickElement)
+
+          $('#p1').addClass('aktif')
+          $('#p2').removeClass('aktif')
+          $('#p3').removeClass('aktif')
+
+        })
+
+        $('#p2').click(function(){
+          let clickElement = this.id
+
+          $('#output').text(clickElement)
+
+          $('#p2').addClass('aktif')
+          $('#p1').removeClass('aktif')
+          $('#p3').removeClass('aktif')
+
+        })
+
+        $('#p3').click(function(){
+          let clickElement = this.id
+
+          $('#output').text(clickElement)
+
+          $('#p3').addClass('aktif')
+          $('#p1').removeClass('aktif')
+          $('#p2').removeClass('aktif')
+        })
+
+        */
+        // REFACTOR //
+
+        $('div').click(function(){
+          let selectedId = $(this).attr('id')
+
+          $(`div`).removeClass('aktif')
+
+          $(`div#${selectedId}`).addClass('aktif')
+
+          $('#output').text(selectedId)
+        })
+
+        $('#nama').keyup(function() {
+
+          $('#res').text($(this).val())
+
+        })
+      })
+    </script>
+  </head>
+  <body>
+      <div id="output"></div>
+
+      <div id="p1">Paragraf pertama</div>
+      <div id="p2">Paragraf kedua</div>
+      <div id="p3">Paragraf ketiga</div>
+
+      <br>
+
+      <input type="text" id="nama" value="" placeholder="Ketikan nama anda">
+
+      <div id="res"></div>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Latihan Fungsi dengan Javascript</title>
+    <style>
+      #noun {
+        color: red;
+      }
+      #adjective {
+        color: green;
+      }
+      #verb {
+        color: blue;
+      }
+      #adverb {
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h2>Belajar function di Javascript</h2>
+
+      <div id="output"></div>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script>
+    let noun = ['Meja', 'Kursi', 'Buku', 'Motor', 'Sepatu']
+    let adjective = ['Terlantar', 'Tepat', 'Menarik', 'Menakjubkan' , 'Membosankan']
+    let verb = ['Menerima', 'Menemani', 'Mengagumi', 'Mempengaruhi', 'Membeli']
+    let adverb = ['Keterangan 1', 'Keterangan 2', 'Keterangan 3', 'Keterangan 4', 'Keterangan 5']
+
+    let randomSentence = (randomNoun, randomAdjective, randomVerb, randomAdverb) => {
+      let sentence = `${randomNoun} ${randomAdjective} ${randomVerb} ${randomAdverb}`
+      return sentence
+    }
+
+    for (i = 0; i < 5; i++) {
+      let randomNoun = noun[Math.floor(Math.random()*noun.length)]
+      let randomAdjective = adjective[Math.floor(Math.random()*adjective.length)]
+      let randomVerb = verb[Math.floor(Math.random()*verb.length)]
+      let randomAdverb = adverb[Math.floor(Math.random()*adverb.length)]
+
+      let data = randomSentence(randomNoun, randomAdjective, randomVerb, randomAdverb)
+      data += "<br>"
+      //console.log(data)
+      $('#output').append(data)
+    }
+
+    </script>
+  </body>
+</html>

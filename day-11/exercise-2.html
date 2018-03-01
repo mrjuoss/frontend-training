@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Latihan Fungsi dengan Javascript</title>
+  </head>
+  <body>
+
+    <h2>Belajar function di Javascript</h2>
+
+    <div id="output"></div>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script>
+    let noun = prompt("Input a noun (Kata Benda)")
+    let adjective = prompt("Input a adjective (Kata Sifat)")
+    let verb = prompt("Input a verb (Kata Kerja)")
+    let adverb = prompt("Input adverb (Kata Keterangan)")
+
+    let funny_sentence = (noun, adjective, verb, adverb) => {
+      let sentence = `${noun} ${adjective} ${verb} ${adverb}`
+      return sentence
+    }
+
+    let data = funny_sentence(noun, adjective, verb, adverb)
+
+    $('#output').append(data)
+
+    </script>
+  </body>
+</html>
